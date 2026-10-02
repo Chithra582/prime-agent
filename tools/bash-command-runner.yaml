@@ -1,0 +1,18 @@
+name: "bash-command-runner"
+description: "Executes terminal commands and scripts with real-time output capture, timeout enforcement, and exit code tracking."
+input_schema:
+  type: object
+  properties:
+    command:
+      type: string
+      description: "Shell command or script string to execute."
+    working_directory:
+      type: string
+      description: "Relative or absolute directory path to execute the command within."
+      default: "."
+    timeout_seconds:
+      type: integer
+      description: "Maximum execution duration in seconds before SIGTERM/SIGKILL."
+      default: 120
+  required:
+    - command

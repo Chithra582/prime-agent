@@ -1,0 +1,27 @@
+name: "subagent-lifecycle-manager"
+description: "Spawns, monitors, queries, and terminates recursive child subagents executing parallel exploration or tasks."
+input_schema:
+  type: object
+  properties:
+    action:
+      type: string
+      enum:
+        - "spawn"
+        - "status"
+        - "interrupt"
+        - "terminate"
+        - "collect"
+      description: "Lifecycle action to perform on subagents."
+    agent_id:
+      type: string
+      description: "Unique subagent identifier (required for status, interrupt, terminate, and collect)."
+    task_prompt:
+      type: string
+      description: "Initial prompt instruction defining the subagent's objective (required for spawn)."
+    allowed_tools:
+      type: array
+      items:
+        type: string
+      description: "List of tools granted to the child subagent."
+  required:
+    - action

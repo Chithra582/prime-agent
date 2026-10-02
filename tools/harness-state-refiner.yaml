@@ -1,0 +1,28 @@
+name: "harness-state-refiner"
+description: "Audits execution trajectories, validates evidence, creates state snapshots, and applies refinement patches."
+input_schema:
+  type: object
+  properties:
+    action:
+      type: string
+      enum:
+        - "audit"
+        - "snapshot"
+        - "patch"
+        - "rollback"
+      description: "Harness refinement action to perform."
+    target_component:
+      type: string
+      enum:
+        - "memories"
+        - "skills"
+        - "rules"
+      description: "Target supplemental harness component."
+    evidence_summary:
+      type: string
+      description: "Empirical verification evidence justifying the refinement."
+    patch_data:
+      type: string
+      description: "Content patch or update payload to merge into supplemental harness state."
+  required:
+    - action

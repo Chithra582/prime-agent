@@ -1,0 +1,22 @@
+spec_version: "0.1.0"
+name: "prime-agent"
+version: "0.9.7"
+description: "Self-improving Recursive Language Model (RLM) agent harness with persistent Python REPL control environment, executable skills, and continual learning."
+author: "Prime Intellect & OpenGAP Contributors"
+license: "MIT"
+metadata:
+  domain: "Developer Tools / Autonomous Software Engineering"
+  category: "Developer Tools"
+  framework: "Prime Agent RLM Harness & TypeScript/Python Runtime"
+  language: "TypeScript, Python"
+skills:
+  - "rlm-repl-orchestration"
+  - "continual-harness-refinement"
+  - "recursive-subagent-spawning"
+  - "executable-skill-synthesis"
+tools:
+  - "python-repl-evaluator"
+  - "bash-command-runner"
+  - "file-editor-diff"
+  - "subagent-lifecycle-manager"
+  - "harness-state-refiner"

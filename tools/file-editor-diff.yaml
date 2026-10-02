@@ -1,0 +1,25 @@
+name: "file-editor-diff"
+description: "Applies targeted file edits, inspects unified diffs, and validates file contents across workspace paths."
+input_schema:
+  type: object
+  properties:
+    file_path:
+      type: string
+      description: "Relative path to the target file in the workspace."
+    action:
+      type: string
+      enum:
+        - "view"
+        - "edit"
+        - "diff"
+        - "create"
+      description: "File manipulation action to perform."
+    content:
+      type: string
+      description: "Content to write or replace when editing or creating."
+    original_text:
+      type: string
+      description: "Target text segment to replace during edit action."
+  required:
+    - file_path
+    - action
